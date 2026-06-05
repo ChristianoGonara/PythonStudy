@@ -1,9 +1,18 @@
-i | n |soma|cont|maior|saida
-0|4   | 4  |    |     | p 4
-1|7   |    | 1  |  7  |i 1 7
-2|2   | 6  |    |     |p 6
-3|9   |    | 2  |  9  |i 2 9
-4|3   |    | 3  |  9  | i 39
-
-f 6 3 9
-
+alunos=int(input('n alunos:'))
+aprovados=0
+for i in range(alunos):
+    soma=0
+    for j in range(3):
+        nota=int(input(f'nota {j+1}: '))
+        soma+=nota
+    
+    media= soma/3
+    if media >=7:
+        aprovados+=1
+        print('aprovado')
+    elif media>=5:
+        print('recuperacao')
+    else:
+        print('reprovado')
+    
+print(f'n aprovados: {aprovados}')
